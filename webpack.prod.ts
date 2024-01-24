@@ -31,7 +31,7 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
+                use:  {'loader': 'ts-loader'},
                 exclude: /node_modules/,
             },
             {
@@ -53,6 +53,7 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js'],
     },
     optimization : {
+        usedExports: true,
         minimizer: [ new CssMinimizerPlugin() ],
         minimize: true
     }
