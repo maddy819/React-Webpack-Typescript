@@ -8,14 +8,15 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        clean: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'React-Typescript-Webpack',
             template: "./index.html", // to import index.html file inside index.tsx
-            favicon: "./public/react.png"
+            favicon: "./public/react.png",
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
     ],
     cache: {
         type: 'filesystem',
